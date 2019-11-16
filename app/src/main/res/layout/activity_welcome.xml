@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="25dp"
+    tools:context=".WelcomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/welcome_message1"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/welcome_message2"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"/>
+            <TextView
+                style="@style/editTextForm"
+                android:text="@string/name" />
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/type_your_name"
+                android:inputType="textCapWords"/>
+            <TextView
+                style="@style/editTextForm"
+                android:text="@string/email" />
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/type_your_email"
+                android:inputType="textEmailAddress"/>
+            <CheckBox
+                android:id="@+id/checkbox_send_me_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/send_me_a_copy"/>
+            <CheckBox
+                android:id="@+id/checkbox_send_me_future"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/send_me_more_quiz"/>
+
+            <TextView
+                style="@style/editTextForm"
+                android:text="@string/are_you_active_athlete" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/radio_group_active_athlete">
+                <RadioButton
+                    android:id="@+id/active_athlete_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes"/>
+                <RadioButton
+                    android:id="@+id/active_athlete_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no"/>
+            </RadioGroup>
+
+            <TextView
+                style="@style/editTextForm"
+                android:text="@string/age"/>
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+
+            <Button
+                android:id="@+id/btn_start_quiz"
+                style="@style/buttonDefault"
+                android:onClick="startQuiz"
+                android:text="@string/start_quiz"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
